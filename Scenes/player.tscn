@@ -39,10 +39,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3smsa"]
-radius = 5.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cvnsp"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+radius = 6.0
+height = 12.0
 
 [node name="Player" type="CharacterBody2D" unique_id=447224195]
 script = ExtResource("1_cvnsp")
@@ -55,11 +54,6 @@ autoplay = "idle"
 frame_progress = 0.6546329
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=713016200]
+z_index = 5
 position = Vector2(0, -5)
-shape = SubResource("CircleShape2D_3smsa")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=295142555]
-position = Vector2(-1, 8)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1144291416]
-shape = SubResource("WorldBoundaryShape2D_cvnsp")
+shape = SubResource("CapsuleShape2D_cvnsp")
