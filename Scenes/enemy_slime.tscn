@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dlbu76jmodj12"]
+[gd_scene load_steps=10 format=3 uid="uid://dlbu76jmodj12"]
 
 [ext_resource type="Texture2D" uid="uid://c8uawsub5y4ug" path="res://Assets/sprites/slime_green.png" id="1_k8dlg"]
 [ext_resource type="Script" uid="uid://bgal32bvyjajy" path="res://Scripts/enemy_slime.gd" id="1_shn5r"]
@@ -43,24 +43,24 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1v8u"]
 size = Vector2(14, 15)
 
-[node name="Enemy Slime" type="Node2D" unique_id=1950899629]
+[node name="Enemy Slime" type="Node2D"]
 script = ExtResource("1_shn5r")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1962633314]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_q1ech")
 autoplay = "default"
-frame_progress = 0.16021264
+frame_progress = 0.160213
 
-[node name="Killzone" parent="." unique_id=2030175573 instance=ExtResource("2_shn5r")]
+[node name="Killzone" parent="." instance=ExtResource("2_shn5r")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=37133264]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_w1v8u")
 
-[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1443871581]
+[node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, 5)
 target_position = Vector2(13, 0)
 
-[node name="RayCastLeft\\" type="RayCast2D" parent="." unique_id=1609072251]
+[node name="RayCastLeft\\" type="RayCast2D" parent="."]
 position = Vector2(0, 5)
 target_position = Vector2(-13, 0)
