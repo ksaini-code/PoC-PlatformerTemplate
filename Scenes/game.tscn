@@ -399,7 +399,9 @@ position = Vector2(552, 53)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=987145369]
 position = Vector2(1192, -35)
+collision_mask = 2
 script = ExtResource("11_o5yvi")
+target_position = Vector2(1648, -24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=686912918]
 z_index = 1
@@ -408,11 +410,23 @@ shape = SubResource("RectangleShape2D_ldgsr")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=1554845493]
 position = Vector2(1648, -24)
+collision_mask = 2
 script = ExtResource("12_rku1e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=702421891]
 z_index = 1
 shape = SubResource("RectangleShape2D_rku1e")
+
+[node name="RestartUI" type="CanvasLayer" parent="." unique_id=582510784]
+
+[node name="RestartButton" type="Button" parent="RestartUI" unique_id=1395275366]
+light_mask = 3
+visibility_layer = 3
+offset_left = -34.0
+offset_top = -36.0
+offset_right = 31.0
+offset_bottom = -5.0
+text = "Restart"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
