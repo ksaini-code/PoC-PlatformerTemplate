@@ -5,6 +5,9 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	print("You died! Current level: " + str(GameManager.current_level))
 	Engine.time_scale = 0.5
+	var hurt_sound = body.get_node_or_null("HurtSound")
+	if hurt_sound:
+		hurt_sound.play()
 	body.get_node("CollisionShape2D").queue_free()
 	timer.start()
 
